@@ -7,6 +7,8 @@ sudo add-apt-repository ppa:numix/ppa
 sudo apt-get update
 sudo apt-get install elementary-tweaks numix-icon-theme numix-icon-theme-circle
 install sogou, must modify /etc/os-release
+git config --global user.email "zhaozhanxu@163.com"
+git config --global user.name "zhaozhanxu"
 git config --global credential.helper store
 
 install netease-music
