@@ -1,1 +1,1 @@
-# after_elementary_os_install
+# after_system_install
