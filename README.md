@@ -5,7 +5,7 @@ sudo add-apt-repository ppa:philip.scott/elementary-tweaks
 sudo apt-get update
 
 ##install software
-sudo apt-get install bleachbit elementary-tweaks vim vim-nox cscope exuberant-ctags thunderbird guake chromium-browser gedit git libreoffice fcitx meld gnome-calculator
+sudo apt-get install bleachbit elementary-tweaks vim vim-nox cscope exuberant-ctags thunderbird guake chromium-browser gedit git libreoffice fcitx meld gnome-calculator git-email
 
 ##change to guake
 
@@ -16,9 +16,22 @@ sudo apt-get autoremove
 ##install sogou, must modify /etc/os-release
 
 ##config git
-git config --global user.email "my@mail.com"  
-git config --global user.name "myname"  
-git config --global credential.helper store  
+git config --global user.email "zhaozhanxu@163.com"
+git config --global user.name "zhaozhanxu"
+
+git config --global credential.helper store
+
+git config --global sendemail.smtpserver smtp.163.com
+git config --global sendemail.smtpserverport 465
+git config --global sendemail.smtpencryption ssl
+git config --global sendemail.smtpuser zhaozhanxu@163.com
+git config --global sendemail.smtppass haha_secret
+
+###git patch
+git format-patch -n_commits --cover-letter -M origin/master -o outgoing
+###modify cover-letter content
+git send-email --to=need_email outgoing/*
+
 
 ##install netease-music
 
@@ -30,7 +43,7 @@ sudo add-apt-repository ppa:hzwhuang/ss-qt5
 sudo apt-get install shadowsocks-qt5
 
 ##options, install themes
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"  
-sudo apt-key adv --recv-keys --keyserver keyserver.Ubuntu.com BEB6D886  
-sudo apt-get update  
-sudo apt-get install arc-theme -y  
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
+sudo apt-key adv --recv-keys --keyserver keyserver.Ubuntu.com BEB6D886
+sudo apt-get update
+sudo apt-get install arc-theme -y
