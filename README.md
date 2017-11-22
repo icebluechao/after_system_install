@@ -10,7 +10,7 @@ sudo apt-get update
 # install software
 
 ```bash
-sudo apt-get install bleachbit elementary-tweaks vim vim-nox cscope exuberant-ctags thunderbird guake chromium-browser gedit git libreoffice fcitx meld gnome-calculator git-email
+sudo apt-get install elementary-tweaks vim vim-nox cscope exuberant-ctags thunderbird guake chromium-browser gedit git libreoffice fcitx meld gnome-calculator git-email
 ```
 
 # change to guake
